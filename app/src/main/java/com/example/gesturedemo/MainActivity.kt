@@ -20,8 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             GestureDemoTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    MainScreen(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -42,6 +41,11 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     GestureDemoTheme {
-        Greeting("Android")
+        MainScreen()
     }
+}
+
+@Composable
+fun MainScreen(modifier: Modifier = Modifier) {
+
 }
